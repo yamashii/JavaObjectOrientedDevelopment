@@ -17,7 +17,7 @@ public class Card {
   /** */
   public static final int SUIT_NUM = 4;
   /** */
-  public static final int CARD_NUM = 1;
+  public static final int CARD_NUM = 13;
   protected int suit;
   protected int number;
 

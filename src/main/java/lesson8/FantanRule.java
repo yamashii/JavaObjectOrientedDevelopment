@@ -9,11 +9,11 @@ public class FantanRule implements Rule {
   /**
    * @see lesson8.Rule#findCandidate(lesson8.Hand, lesson8.Table)
    */
-  public Card[] findCandidate(Hand hand, Table table) {
-    Card[] candidate = null;
+  public Card[] findCandidate(Hand hand, Table table) { Card[] candidate = null;
 
     int numberOfHand = hand.getNumberOfCards();
     for (int position = 0; position < numberOfHand; position++) {
+      
       Card lookingCard = hand.lookCard(position);
       int number = lookingCard.getNumber();
       int suit = lookingCard.getSuit();

@@ -20,7 +20,7 @@ public class Master {
     int numberOfCards = cards.getNumberOfCards();
     int numberOfPlayers = this.players.size();
     for (int index = 0; index < numberOfCards; index++) {
-      Card card = cards.pickCard(index);
+      Card card = cards.pickCard(0);
       Player player = this.players.get(index % numberOfPlayers);
       player.receiveCard(card);
     }

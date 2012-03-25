@@ -26,7 +26,7 @@ public class FantanPlayer extends Player {
   @Override
   public void receiveCard(Card card) {
     if (card.getNumber() == 7) {
-      System.out.println(this.name + ":" + card + "を置きました。"); //$NON-NLS-1$//$NON-NLS-2$
+      System.out.println(this.name + ":" + card.getNumber() + "を置きました。"); //$NON-NLS-1$//$NON-NLS-2$
       super.table.putCard(new Card[] {card});
     } else {
       super.receiveCard(card);
@@ -43,7 +43,7 @@ public class FantanPlayer extends Player {
     Card[] candidate = this.rule.findCandidate(this.myhand, this.table);
 
     if (candidate != null) {
-      System.out.println("" + candidate[0] + "を置きました。\n"); //$NON-NLS-1$//$NON-NLS-2$
+      System.out.println("" + candidate[0].getNumber() + "を置きました。\n"); //$NON-NLS-1$//$NON-NLS-2$
       this.table.putCard(candidate);
 
       System.out.println(this.table);
@@ -66,9 +66,11 @@ public class FantanPlayer extends Player {
     }
   }
 
+  /**
+   * @return
+   */
   public int getPass() {
-    // TODO Auto-generated method stub
-    return 0;
+    return this.pass;
   }
 
 }
