@@ -73,6 +73,30 @@ public class Card {
       case 1:
         string.append("A"); //$NON-NLS-1$
         break;
+      case 2:
+        string.append("2"); //$NON-NLS-1$
+        break;
+      case 3:
+        string.append("3"); //$NON-NLS-1$
+        break;
+      case 4:
+        string.append("4"); //$NON-NLS-1$
+        break;
+      case 5:
+        string.append("5"); //$NON-NLS-1$
+        break;
+      case 6:
+        string.append("6"); //$NON-NLS-1$
+        break;
+      case 7:
+        string.append("7"); //$NON-NLS-1$
+        break;
+      case 8:
+        string.append("8"); //$NON-NLS-1$
+        break;
+      case 9:
+        string.append("9"); //$NON-NLS-1$
+        break;
       case 10:
         string.append("T"); //$NON-NLS-1$        
         break;
@@ -90,6 +114,6 @@ public class Card {
         break;
     }
 
-    return super.toString();
+    return string.toString();
   }
 }

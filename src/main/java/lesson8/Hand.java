@@ -70,6 +70,7 @@ public class Hand {
   @Override
   public String toString() {
     StringBuffer string = new StringBuffer();
+    
     int size = this.hand.size();
     if (size > 0) {
       for (int index = 0; index < size; index++) {
@@ -78,7 +79,7 @@ public class Hand {
         string.append(" "); //$NON-NLS-1$
       }
     }
-    return super.toString();
+    return string.toString();
   }
 
 }

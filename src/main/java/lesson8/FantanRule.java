@@ -9,11 +9,12 @@ public class FantanRule implements Rule {
   /**
    * @see lesson8.Rule#findCandidate(lesson8.Hand, lesson8.Table)
    */
-  public Card[] findCandidate(Hand hand, Table table) { Card[] candidate = null;
+  public Card[] findCandidate(Hand hand, Table table) {
+    Card[] candidate = null;
 
     int numberOfHand = hand.getNumberOfCards();
     for (int position = 0; position < numberOfHand; position++) {
-      
+
       Card lookingCard = hand.lookCard(position);
       int number = lookingCard.getNumber();
       int suit = lookingCard.getSuit();
@@ -27,13 +28,19 @@ public class FantanRule implements Rule {
         break;
       }
     }
-    return null;
+    return candidate;
   }
 
   private static boolean isThereCard(Table table, int suit, int number) {
     Card[][] cards = table.getCards();
-    if (cards[suit - 1][number - 1] != null) {
-      return true;
+    try {
+      if (cards[suit - 1][number - 1] != null) {
+        return true;
+      }
+    } catch (Exception e) {
+      System.out.println(suit);
+      System.out.println(number);
+      throw new IllegalStateException(e);
     }
     return false;
   }
